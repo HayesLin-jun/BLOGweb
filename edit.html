@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publish Article - My Blog</title>
+    <title>Edit Article - My Blog</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/nav.js"></script>
     <style>
-        /* Publish page specific styles */
         .publish-container {
             max-width: 800px;
             margin: 2rem auto;
@@ -53,22 +51,24 @@
             <a href="index.html">Home</a>
             <a href="register.html">Register</a>
             <a href="login.html">Login</a>
-            <a href="publish.html" class="active">Publish Article</a>
+            <a href="publish.html">Publish Article</a>
+            <a href="user.html">User Center</a>
         </nav>
     </header>
 
     <main class="publish-container">
-        <a href="index.html" class="back-home">&larr; Back to Homepage</a>
-        <h2>Publish New Article</h2>
-        <form id="publishForm" class="publish-form">
+        <a href="user.html" class="back-home">&larr; Back to User Center</a>
+        <h2>Edit Article</h2>
+        <form id="editForm" class="publish-form">
+            <input type="hidden" id="article-id"> <!-- Hidden field to store article ID -->
             <div class="form-group">
-                <label for="article-title">Article Title</label>
-                <input type="text" id="article-title" name="article-title" required placeholder="Enter article title">
+                <label for="edit-title">Article Title</label>
+                <input type="text" id="edit-title" name="edit-title" required placeholder="Enter article title">
             </div>
 
             <div class="form-group">
-                <label for="article-category">Category</label>
-                <select id="article-category" name="article-category" required>
+                <label for="edit-category">Category</label>
+                <select id="edit-category" name="edit-category" required>
                     <option value="">Select Category</option>
                     <option value="Technology">Technology</option>
                     <option value="Life">Life</option>
@@ -77,11 +77,11 @@
             </div>
 
             <div class="form-group">
-                <label for="article-content">Content</label>
-                <textarea id="article-content" name="article-content" required placeholder="Write your article here..."></textarea>
+                <label for="edit-content">Content</label>
+                <textarea id="edit-content" name="edit-content" required placeholder="Write your article here..."></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Publish Article</button>
+            <button type="submit" class="submit-btn">Update Article</button>
         </form>
     </main>
 
@@ -89,6 +89,6 @@
         <p>&copy; 2025 My Blog. All rights reserved.</p>
     </footer>
 
-    <script src="js/publish.js"></script>
+    <script src="js/edit.js"></script>
 </body>
 </html>

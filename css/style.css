@@ -165,3 +165,15 @@ body {
     color: white;
     margin-top: 2rem;
 }
+/* Supplementary global navigation styles */
+.nav-links a[href="user.html"] {
+    margin-left: 0.5rem;
+}
+
+/* Article card hover effect optimization */
+.post-card {
+    transition: transform 0.3s ease;
+}
+.post-card:hover {
+    transform: translateY(-5px);
+}

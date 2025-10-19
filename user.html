@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Center - My Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .user-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .user-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .user-articles h3 {
+            margin-bottom: 1rem;
+        }
+        .logout-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .article-action {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .edit-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .delete-btn {
+            color: #e74c3c;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+    </style>
+    <script src="js/nav.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">My Blog</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="publish.html">Publish Article</a>
+            <a href="user.html" class="active">User Center</a>
+        </nav>
+    </header>
+
+    <main class="user-container">
+        <section class="user-info">
+            <h2>User Information</h2>
+            <p><strong>Username:</strong> <span id="username-display"></span></p>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </section>
+
+        <section class="user-articles">
+            <h3>My Published Articles</h3>
+            <div id="my-articles-list" class="blog-list">
+                <!-- Article list will be generated dynamically via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="js/user.js"></script>
+</body>
+</html>
